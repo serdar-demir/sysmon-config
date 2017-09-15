@@ -846,6 +846,9 @@
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU\</TargetObject>
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths\</TargetObject>
 			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\services\DNS\Parameters\</TargetObject> <!--Microsoft:Windows:DNS: ServerLevelPluginDll Issue https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83 -->
+			<!-- Testing - Unknown log volume but relevant registry keys -->
+			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Enum\Root\LEGACY_</TargetObject> <!-- Often used by malware -->
+			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Services\</TargetObject> <!--Windows Services -->
 		</RegistryEvent>
 	</RuleGroup>
 
