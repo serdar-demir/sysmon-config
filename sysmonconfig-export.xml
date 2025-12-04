@@ -845,6 +845,7 @@
             <!--RunMRU and TypedPaths monitoring to detect potential clickfixing and filefixing attacks-->
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU\</TargetObject>
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths\</TargetObject>
+			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\services\DNS\Parameters\</TargetObject> <!--Microsoft:Windows:DNS: ServerLevelPluginDll Issue https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83 -->
 		</RegistryEvent>
 	</RuleGroup>
 
